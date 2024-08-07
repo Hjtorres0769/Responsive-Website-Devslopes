@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar div {
+  margin: 10px;
+}
+
+.header {
+  text-align: center;
+  margin: 25px 0;
+  padding: 50px;
+}
+
+.picture-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-gap: 25px;
+}
+
+.picture-section img,
+.picture-section > div {
+  width: 300px;
+  font-size: 18px;
+}
+
+.picture-section h3 {
+  font-size: 25px;
+}
+
+.team-header h2 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-column: 1/-1;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.team-header h2:before,
+.team-header h2:after {
+  display: block;
+  content: "";
+  height: 3px;
+  background: linear-gradient(to left, #333, transparent);
+}
+
+.team-header h2:after {
+  background: linear-gradient(to right, #333, transparent);
+}
+
+.team-header div {
+  text-align: center;
+  display: block;
+  width: 625px;
+  margin: 25px auto;
+}
+
+.teammates {
+  display: flex;
+  justify-content: center
+  margin: 75px;
+}
+
+.teammates img {
+  width: 150px;
+}
+
+.teammates div {
+  
+}
