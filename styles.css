@@ -1,3 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -16,12 +20,13 @@
 .picture-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  justify-items: center;
   grid-gap: 25px;
+  padding: 20px;
 }
 
 .picture-section img,
-.picture-section > div {
+.picture-section .caption {
   width: 300px;
   font-size: 18px;
 }
@@ -29,14 +34,23 @@
 .picture-section h3 {
   font-size: 25px;
 }
+.caption,
+.subtitle {
+  color: #999;
+}
+
+.team-header {
+  margin: 50px 0;
+}
 
 .team-header h2 {
   text-align: center;
   display: grid;
   grid-template-columns: 150px auto 150px;
   grid-column: 1/-1;
-  grid-gap: 20px;
   align-items: center;
+  justify-content: center;
+  color: #6b6b6b;
 }
 
 .team-header h2:before,
@@ -44,11 +58,13 @@
   display: block;
   content: "";
   height: 3px;
-  background: linear-gradient(to left, #333, transparent);
+  width: 15px;
+  background-color: lightgray;
+  margin: 0 15px;
 }
 
-.team-header h2:after {
-  background: linear-gradient(to right, #333, transparent);
+.team-header h2:before {
+  margin-left: auto;
 }
 
 .team-header div {
@@ -60,14 +76,104 @@
 
 .teammates {
   display: flex;
-  justify-content: center
-  margin: 75px;
+  justify-content: center;
+  grid-gap: 25px;
+  margin-bottom: 50px;
 }
 
 .teammates img {
   width: 150px;
 }
 
-.teammates div {
-  
+.socials img,
+.footer-icons img {
+  width: 15px;
+  height: 15px;
+}
+.footer-icons img {
+  width: 25px;
+  height: 25px;
+}
+.footer {
+  background-color: #282828;
+  padding-top: 1px;
+}
+
+.footer-icons {
+  color: #777;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  grid-gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.footer-icons img {
+  vertical-align: middle;
+}
+
+.footer-info {
+  display: grid;
+  color: #777;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.footer-info b {
+  color: white;
+}
+
+h3 {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .picture-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-1,
+  .portfolio-2,
+  .portfolio-3 {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+  }
+
+  .portfolio-1 .caption,
+  .portfolio-2 .caption,
+  .portfolio-3 .caption {
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px;
+  }
+
+  .portfolio-1 img,
+  .portfolio-2 img,
+  .portfolio-3 img {
+    margin: auto 0;
+  }
+
+  .teammates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 50px;
+    justify-items: center;
+  }
+
+  .teammate-1,
+  .teammate-2 {
+    grid-row: 1/2;
+  }
+  .teammate-3,
+  .teammate-4 {
+    grid-row: 2/3;
+  }
+}
+
+@media (max-width: 400px) {
 }
